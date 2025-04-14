@@ -1,0 +1,338 @@
+/* Importando fonte moderna */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+/* Reset e configurações básicas */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  background-color: #f9f9f9;
+}
+
+/* Containers */
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #000000;
+  color: white;
+  padding: 1rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+
+.logo {
+  text-align: center;
+  margin-bottom: 0.5rem;
+}
+
+.logo img {
+  max-width: 180px; /* Tamanho do logo */
+  height: auto;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-list li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.nav-list li a:hover {
+  color: #adadab;
+}
+
+/* Botão do menu mobile */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.63), rgba(0, 6, 14, 0.514)),
+    url('') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 5rem 2rem;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #000000;
+  color: #ffffff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background-color: #ffd633;
+}
+
+/* Seções */
+section {
+  padding: 4rem 0;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #000000;
+}
+
+/* Programação */
+.programacao ul {
+  list-style: none;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.programacao ul li {
+  margin: 0.5rem 0;
+}
+
+/* Ministérios */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: rgb(216, 212, 212);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: 500;
+}
+
+/* Contato */
+.contato form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto 2rem auto;
+}
+
+.contato input,
+.contato textarea {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contato textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+/* Rodapé */
+.footer {
+  background-color: #151616;
+  color: white;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-size: 0.9rem;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .nav-list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #0f0f0f;
+    flex-direction: column;
+    width: 100%;
+    display: none;
+  }
+
+  .nav-list.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+.lideranca {
+  padding: 4rem 0;
+  background-color: #f4f8fb;
+}
+
+.lideranca-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.lider-card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.lider-card:hover {
+  transform: translateY(-5px);
+}
+
+.lider-card img {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 1rem;
+  border: 3px solid #002f6c;
+}
+
+.lider-card h3 {
+  font-size: 1.2rem;
+  color: #002f6c;
+  margin-bottom: 0.5rem;
+}
+
+.lider-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.devocionais {
+  padding: 4rem 0;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.devocional-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.devocional-card {
+  background: #f4f8fb;
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s;
+}
+
+.devocional-card:hover {
+  transform: translateY(-5px);
+}
+
+.devocional-card iframe {
+  width: 100%;
+  height: 200px;
+  border-radius: 12px;
+  margin-bottom: 1rem;
+}
+
+.devocional-card h3 {
+  font-size: 1.2rem;
+  color: #002f6c;
+  margin-bottom: 0.5rem;
+}
+
+.devocional-card p {
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.contato {
+  padding: 4rem 0;
+  background-color: #f4f8fb;
+  text-align: center;
+}
+
+.info-contato p {
+  font-size: 1.1rem;
+  color: #333;
+  margin: 0.5rem 0;
+}
+
+.redes-sociais {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.social {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #b6b7b891;
+  color: rgb(0, 0, 0);
+  padding: 0.6rem 1.2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.social img {
+  width: 20px;
+  height: 20px;
+}
+
+.social.instagram:hover {
+  background-color: #e1306c;
+}
+
+.social.youtube:hover {
+  background-color: #ff0000;
+}
